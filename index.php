@@ -23,6 +23,9 @@ Smart Cart
 </head>
 <link rel='stylesheet' type = 'text/css' href='default1.css'>
 <body>
+
+echo 'Hello';
+
 <div id = 'topboxS'>
 	<img src="http://localhost/images/coollogo_com-958611129.png">
 </div>
