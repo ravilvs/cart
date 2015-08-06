@@ -18,7 +18,7 @@
 	{
 		$selemail = $_POST['email'];
 	}
-	if($selpass != $selconpass)
+	if($selpass == $selconpass)
 	{
 		$sql = "INSERT INTO users(". "UserName, Password, EmailId" . " ) VALUES (" . "'" . $selusr . "',". "'" . $selpass . "',". "'" . $selemail . "'" . ")";
 		$sqlcon = mysqli_connect($_SESSION['server'], $_SESSION['user'], $_SESSION['password'], $_SESSION['database']);

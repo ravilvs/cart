@@ -3,9 +3,9 @@
 	
 	if(!isset($_SESSION['server']))
 	{
-		$_SESSION['server'] = '127.0.0.1';
-		$_SESSION['user'] = 'sravani';
-		$_SESSION['password'] = 'pass123';
+		$_SESSION['server'] = 'sravanicart-cartsmartcart.rhcloud.com';
+		$_SESSION['user'] = 'adminfvNIQ7T';
+		$_SESSION['password'] = '5Qc7jxBG-Tsu';
 		$_SESSION['database'] = 'sravanicart';
 		$_SESSION['userid'] = 0;
 		$_SESSION['login'] = 0;
