@@ -30,7 +30,7 @@ Smart Cart
 <div id = 'contentS'>
 <div class = 'leftdivWrapperS'>
 	<div id = 'leftboxS'>
-		Groups #
+		Groups changed #
 		<br />
 		<?php
 			
