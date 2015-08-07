@@ -43,6 +43,12 @@ Smart Cart
 			}
 			$result = $sqlcon -> query(
 			"select pg.GroupId, pg.GroupName, count(*) itemcount  from ProductGroups PG inner join Products P on P.GroupId = PG.GroupID group by pg.GroupId, pg.GroupName");
+			
+			echo 'Row Count : ';
+			echo $result.Count;
+			echo '<br />';
+			
+			
 			echo '<ul>';
 			while($row = $result->fetch_assoc())
 			{
