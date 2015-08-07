@@ -12,7 +12,7 @@
 				die("Error in connecting database");
 			}
 			
-			$result = $sqlcon->query("select * from product groups");
+			$result = $sqlcon->query("select * from productgroups");
 			if(!$result)
 			{
     			while($row = $result->fetch_array())
