@@ -14,7 +14,7 @@
 			
 			$result = $sqlcon->query("select * from productgroups1");
 			echo 'Records : ';
-			if(!$mysqli->error)
+			if($result)
 			{
     			while($row = $result->fetch_array())
     			{
