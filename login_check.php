@@ -16,8 +16,7 @@
 			{
 				die("Error in connecting database");
 			}
-	 $sql = "select userid from users where UserName=" . "'" . $selusr . "'" . "AND Password=" . "'" . $selpass . "'";
-	 echo $sql;
+	 $sql = "select userid from users where userName=" . "'" . $selusr . "'" . "AND password=" . "'" . $selpass . "'";
 	 $result = $sqlcon -> query($sql);
 	 $row = $result->fetch_assoc();
 			if ( $row) 

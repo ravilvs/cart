@@ -109,7 +109,7 @@ Smart Cart
 				echo '<input type="text" name="quantity" size="5">';
 				echo '<input type="hidden" name="prodid" value = "' . $row['productid'] . '">';
 				echo '<br />';
-				echo "<img src = 'images/Buy-Now-Button1.png'>";
+				echo "<img src = 'images/buy-now-nutton1.png'>";
 				echo '<input type="submit" name="cart" value="Add to cart">';
 				
 			

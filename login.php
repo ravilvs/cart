@@ -28,7 +28,7 @@ echo '</div>';
 <div id = boxlinks>
 <a href="index.php?"><b> |home| </b></a>
 <?php
-	if($_session['login'] == 0)
+	if($_SESSION['login'] == 0)
 	{
 ?>
 <a href="login.php?"><b> |login| </b></a>
@@ -44,7 +44,7 @@ else
 ?>
 </div>
 <div id = 'images'>
-	<img src="images/shopping..png">
+	<img src="images/shopping.png">
 </div>
 </body>
 </html>

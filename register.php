@@ -7,7 +7,7 @@ Smart Cart
 <link rel='stylesheet' type = 'text/css' href='default1.css'>
 <body>
 <div id = 'topboxS'>
-	<img src="himages/coollogo_com-958611129.png">
+	<img src="images/coollogo_com-958611129.png">
 </div>
 <?php
 echo "<div id = 'middleboxR'>";
