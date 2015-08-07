@@ -4,10 +4,10 @@
 	session_start();
 	 echo 'Stage-1 -- ';
 	
-	echo $_SESSION['server'];
+	echo $_SESSION['user'];
 	echo 'Stage - 1 completed ';
 	
-	if(!isset($_SESSION['server']))
+	if(!isset($_SESSION['user']))
 	{
 	 echo 'Stage-2';
 	    
