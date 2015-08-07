@@ -101,7 +101,7 @@ smart cart
 	echo '<tr>';
 		
 		echo '<td>';
-		echo 'total amount';
+		echo 'Total Amount';
 		echo '</td>';
 
 		echo '<td>';
