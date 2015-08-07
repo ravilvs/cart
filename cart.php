@@ -1,13 +1,13 @@
 <?php
 	require_once('variables.php');
 
-	if($_session['login'] == 0)
+	if($_SESSION['login'] == 0)
 	{
 		header ("location: register.php");
 		return;
 	}
 
-	 $sqlcon = mysqli_connect($_session['server'], $_session['user'], $_session['password'], $_session['database']);
+	 $sqlcon = mysqli_connect($_SESSION['server'], $_SESSION['user'], $_SESSION['password'], $_SESSION['database']);
 	 if(!$sqlcon)
 			{
 				die("error in connecting database");
@@ -15,19 +15,19 @@
 	
 	
 	echo 'user id : ';
-	echo $_session['userid'];
+	echo $_SESSION['userid'];
 	echo '<br />';
 	
 	
 	echo 'prod id : ';
-	echo $_post['prodid'];
+	echo $_POST['prodid'];
 	echo '<br />';
 
 	echo 'qty : ';
-	echo $_post['quantity'];
+	echo $_POST['quantity'];
 	echo '<br />';
 	//insert
-	$qury = "insert into cartdetails(". "userid, productid, ordquantity" . " ) values (" . $_session['userid'] . "," . $_post['prodid'] . "," . $_post['quantity'] . ")";
+	$qury = "insert into cartdetails(". "userid, productid, ordquantity" . " ) values (" . $_SESSION['userid'] . "," . $_POST['prodid'] . "," . $_POST['quantity'] . ")";
 	echo $qury;
 	$result = $sqlcon -> query($qury);
 	
