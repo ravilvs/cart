@@ -81,7 +81,7 @@ smart cart
 		
 		$amount = $row['amount'];
 		echo '<td style = "text-align:  right;">';
-		echo 'rs ' . $row['amount'];
+		echo 'Rs ' . $row['amount'];
 		echo '</td>';
 		
 		echo '<td style = "text-align:  right;">';
@@ -89,7 +89,7 @@ smart cart
 
 		echo '<a href="remove.php?productid=' ;
 		echo $row['productid'] ;
-		echo '">remove</a>';
+		echo '">Remove</a>';
 
 		echo '</td>';
 		
