@@ -14,7 +14,7 @@ smart cart
 	<img src="images/coollogo_com-958611129.png">
 </div>
 <?php
-	 $sqlcon = mysqli_connect($_session['server'], $_session['user'], $_session['password'], $_session['database']);
+	 $sqlcon = mysqli_connect($_SESSION['server'], $_SESSION['user'], $_SESSION['password'], $_SESSION['database']);
 	 if(!$sqlcon)
 			{
 				die("error in connecting database");
@@ -22,7 +22,7 @@ smart cart
 			
 	
 	//select
-	$sql ="select p.productid, p.productname, cd.ordquantity, p.price, pg.groupname, cd.ordquantity * p.price as amount from products p inner join cartdetails cd on p.productid = cd.productid inner join productgroups pg on p.groupid = pg.groupid where userid=" . $_session['userid'] . " order by p.productname";
+	$sql ="select p.productid, p.productname, cd.ordquantity, p.price, pg.groupname, cd.ordquantity * p.price as amount from products p inner join cartdetails cd on p.productid = cd.productid inner join productgroups pg on p.groupid = pg.groupid where userid=" . $_SESSION['userid'] . " order by p.productname";
 	
 	$res = $sqlcon -> query($sql);
 	
@@ -128,9 +128,9 @@ smart cart
 	
 	$sqlcon -> close();
 	 echo '<a href = "index.php?groupid=';
-	 echo $_session['currentgroupid'];
+	 echo $_SESSION['currentgroupid'];
 	 echo '&ordcol=';
-	 echo $_session['currentordcol'];
+	 echo $_SESSION['currentordcol'];
 	 echo '">';
 	 echo 'back';
 	 echo '</a>';
@@ -142,7 +142,7 @@ smart cart
 <div id = boxlinks>
 <a href="index.php?"><b> |home| </b></a>
 <?php
-	if($_session['login'] == 0)
+	if($_SESSION['login'] == 0)
 	{
 ?>
 <a href="login.php?"><b> |login| </b></a>
