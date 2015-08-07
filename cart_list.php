@@ -5,19 +5,19 @@
 <html>
 <head>
 <title>
-smart cart
+Smart Cart
 </title>
 </head>
 <link rel='stylesheet' type = 'text/css' href='default1.css'>
 <body>
-<div id = 'topboxs'>
+<div id = 'topboxS'>
 	<img src="images/coollogo_com-958611129.png">
 </div>
 <?php
 	 $sqlcon = mysqli_connect($_SESSION['server'], $_SESSION['user'], $_SESSION['password'], $_SESSION['database']);
 	 if(!$sqlcon)
 			{
-				die("error in connecting database");
+				die("Error in connecting database");
 			}
 			
 	
@@ -26,16 +26,13 @@ smart cart
 	
 	$res = $sqlcon -> query($sql);
 	
-	echo "<div id='middleboxfp'>";
+	echo "<div id='middleboxFP'>";
 	echo "<table border = '1' cellspacing = '2' cellpadding = '2' align = 'center'>";
-
-
 		echo '<tr>';
 		
 		echo '<td>';
 		echo 'Group Name';
 		echo '</td>';
-
 		echo '<td>';
 		echo 'Product Name';
 		echo '</td>';
@@ -86,11 +83,9 @@ smart cart
 		
 		echo '<td style = "text-align:  right;">';
 		echo "<img src = 'images/remove from shopping cart.jpg'>";
-
 		echo '<a href="remove.php?productid=' ;
 		echo $row['productid'] ;
 		echo '">Remove</a>';
-
 		echo '</td>';
 		
 		echo '</tr>';
@@ -103,7 +98,6 @@ smart cart
 		echo '<td>';
 		echo 'Total Amount';
 		echo '</td>';
-
 		echo '<td>';
 		echo '</td>';
 		
@@ -136,28 +130,28 @@ smart cart
 	 echo '</a>';
 	 echo "</div>";
 ?>
-<div id = 'bottomboxs'>
-	<p><b>copyright : sravani lalitha, amrita school of engineering, amritapuri</b>.</p>
+<div id = 'bottomboxS'>
+	<p><b>Copyright : SRAVANI LALITHA, AMRITA SCHOOL OF ENGINEERING, AMRITAPURI</b>.</p>
 </div>
 <div id = boxlinks>
-<a href="index.php?"><b> |home| </b></a>
+<a href="index.php?"><b> |Home| </b></a>
 <?php
 	if($_SESSION['login'] == 0)
 	{
 ?>
-<a href="login.php?"><b> |login| </b></a>
+<a href="login.php?"><b> |Login| </b></a>
 <?php
 	}
 else
 	{
 ?>
-<a href="logout.php?"><b> |logout| </b></a>
+<a href="logout.php?"><b> |Logout| </b></a>
 <?php
 	}
 ?>
 </div>
-<div id = 'images'>
-	<img src="images/shopping.png">
+<div id = 'imageS'>
+	<img src="images/shopping..png">
 </div>
 </body>
 </html>

@@ -10,7 +10,7 @@
 	 $sqlcon = mysqli_connect($_SESSION['server'], $_SESSION['user'], $_SESSION['password'], $_SESSION['database']);
 	 if(!$sqlcon)
 			{
-				die("error in connecting database");
+				die("Error in connecting database");
 			}
 	
 	
