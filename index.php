@@ -30,7 +30,7 @@ Smart Cart
 <div id = 'contentS'>
 <div class = 'leftdivWrapperS'>
 	<div id = 'leftboxS'>
-		Groups working fine
+		Groups :
 		<br />
 		<?php
 			
@@ -40,23 +40,6 @@ Smart Cart
 				die("Error in connecting database");
 			}
 			
-			$result = $sqlcon->query("show tables");
-			if($result)
-			{
-    			while($row = $result->fetch_array())
-    			{
-    			    echo 'Table : ';
-			        echo $row[0];
-			        echo '<br />';
-			        
-    			}
-    			
-			}
-			else
-			{
-			    
-			    print_r(error_get_last());
-			}
 
 			$result = $sqlcon -> query(
 			"select pg.groupid, pg.groupname, count(*) itemcount  from productgroups pg inner join products p on p.groupid = pg.groupid group by pg.groupid, pg.groupname");
@@ -65,7 +48,7 @@ Smart Cart
 			while($row = $result->fetch_assoc())
 			{
 				echo '<li>';
-				echo'<a href ="index.php?groupid=' . $row['GroupId'] . '&ordcol=' . $selord . '">' . $row['GroupName'] . '<a> [';
+				echo'<a href ="index.php?groupid=' . $row['groupid'] . '&ordcol=' . $selord . '">' . $row['groupname'] . '<a> [';
 				echo $row['itemcount'];
 				echo ']';
 				echo'<br />';
@@ -107,14 +90,14 @@ Smart Cart
 		{
 			echo '<div class ="itembrd">';
 			echo '<div class = "ProImgBrd">';
-			echo '<img src = "images/'.$selgrp.'/'.$row['ProductId'].'.jpg">';
+			echo '<img src = "images/'.$selgrp.'/'.$row['productid'].'.jpg">';
 			echo '</div>';
 			echo '<br />';
-			echo 'Product Id: '.$row['ProductId'];
+			echo 'Product Id: '.$row['productid'];
 			echo '<br />';
-			echo 'Name: '. $row['ProductName'];
+			echo 'Name: '. $row['productname'];
 			echo '<br />';
-			echo 'Price: '. $row['Price'];
+			echo 'Price: '. $row['price'];
 			
 			echo '<br />';
 			if($_SESSION['login'] == 1)
@@ -126,7 +109,7 @@ Smart Cart
 				echo '<input type="text" name="quantity" size="5">';
 				echo '<input type="hidden" name="prodid" value = "' . $row['ProductId'] . '">';
 				echo '<br />';
-				echo "<img src = 'http://localhost/images/Buy-Now-Button1.png'>";
+				echo "<img src = 'images/Buy-Now-Button1.png'>";
 				echo '<input type="submit" name="cart" value="Add to cart">';
 				
 			
@@ -143,27 +126,27 @@ Smart Cart
 	<p><b>Copyright : SRAVANI LALITHA, AMRITA SCHOOL OF ENGINEERING, AMRITAPURI</b>.</p>
 </div>
 <div id = boxlinks>
-<a href="http://localhost/index.php?"><b> |Home| </b></a>
+<a href="index.php?"><b> |Home| </b></a>
 <?php
 	if($_SESSION['login'] == 0)
 	{
 ?>
-<a href="http://localhost/login.php?"><b> |Login| </b></a>
+<a href="login.php?"><b> |Login| </b></a>
 <br />
 <?php
 	}
 else
 	{
 ?>
-<a href="http://localhost/logout.php?"><b> |Logout| </b></a>
-<a href="http://localhost/cart_list.php"><b> |My cart| </b></a>
+<a href="logout.php?"><b> |Logout| </b></a>
+<a href="cart_list.php"><b> |My cart| </b></a>
 <br />
 <?php
 	}
 ?>
 </div>
 <div id = 'imageS'>
-	<img src="http://localhost/images/shopping..png">
+	<img src="images/shopping..png">
 </div>
 <?php
 		$sqlcon->close();
