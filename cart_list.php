@@ -33,23 +33,23 @@ smart cart
 		echo '<tr>';
 		
 		echo '<td>';
-		echo 'group name';
+		echo 'Group Name';
 		echo '</td>';
 
 		echo '<td>';
-		echo 'product name';
+		echo 'Product Name';
 		echo '</td>';
 		
 		echo '<td>';
-		echo 'ord qty';
+		echo 'Ord Qty';
 		echo '</td>';
 		
 		echo '<td>';
-		echo 'price';
+		echo 'Price';
 		echo '</td>';
 	
 		echo '<td>';
-		echo 'amount';
+		echo 'Amount';
 		echo '</td>';
 		
 		echo '<td>';
@@ -114,7 +114,7 @@ smart cart
 		echo '</td>';
 	
 		echo '<td style = "text-align:  right;">';
-		echo 'rs ' . $sum;
+		echo 'Rs ' . $sum;
 		echo '</td>';
 		
 		echo '<td>';
@@ -132,7 +132,7 @@ smart cart
 	 echo '&ordcol=';
 	 echo $_SESSION['currentordcol'];
 	 echo '">';
-	 echo 'back';
+	 echo 'Back';
 	 echo '</a>';
 	 echo "</div>";
 ?>
