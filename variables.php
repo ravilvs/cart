@@ -2,7 +2,10 @@
 	 echo 'Session Created';
 
 	session_start();
-	 echo 'Stage-1';
+	 echo 'Stage-1 -- ';
+	
+	echo $_SESSION['server'];
+	echo 'Stage - 1 completed ';
 	
 	if(!isset($_SESSION['server']))
 	{
