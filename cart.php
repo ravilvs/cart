@@ -1,42 +1,42 @@
 <?php
 	require_once('variables.php');
 
-	if($_SESSION['login'] == 0)
+	if($_session['login'] == 0)
 	{
-		header ("Location: register.php");
+		header ("location: register.php");
 		return;
 	}
 
-	 $sqlcon = mysqli_connect($_SESSION['server'], $_SESSION['user'], $_SESSION['password'], $_SESSION['database']);
+	 $sqlcon = mysqli_connect($_session['server'], $_session['user'], $_session['password'], $_session['database']);
 	 if(!$sqlcon)
 			{
-				die("Error in connecting database");
+				die("error in connecting database");
 			}
 	
 	
-	echo 'User Id : ';
-	echo $_SESSION['userid'];
+	echo 'user id : ';
+	echo $_session['userid'];
 	echo '<br />';
 	
 	
-	echo 'Prod Id : ';
-	echo $_POST['prodid'];
+	echo 'prod id : ';
+	echo $_post['prodid'];
 	echo '<br />';
 
-	echo 'Qty : ';
-	echo $_POST['quantity'];
+	echo 'qty : ';
+	echo $_post['quantity'];
 	echo '<br />';
 	//insert
-	$qury = "INSERT INTO cartdetails(". "UserId, ProductId, ordquantity" . " ) VALUES (" . $_SESSION['userid'] . "," . $_POST['prodid'] . "," . $_POST['quantity'] . ")";
+	$qury = "insert into cartdetails(". "userid, productid, ordquantity" . " ) values (" . $_session['userid'] . "," . $_post['prodid'] . "," . $_post['quantity'] . ")";
 	echo $qury;
 	$result = $sqlcon -> query($qury);
 	
 	$sqlcon -> close();
 
-	header ("Location: cart_list.php");
+	header ("location: cart_list.php");
 	
 	
-	//echo 'Added to Cart successfully!';
+	//echo 'added to cart successfully!';
 	
 	
 ?>

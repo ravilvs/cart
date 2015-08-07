@@ -7,12 +7,12 @@ Smart Cart
 <link rel='stylesheet' type = 'text/css' href='default1.css'>
 <body>
 <div id = 'topboxS'>
-	<img src="himages/coollogo_com-958611129.png">
+	<img src="images/coollogo_com-958611129.png">
 </div>
 <?php
-echo "<div id = 'middleboxR'>";
-	echo '<form method="POST" action="register_save.php">User Name:  <input type="text" name="user" size="40"><br><br>Email ID:  <input type="text" name="email" size="40"><br><br>Password:  <input type="password" name="password" size="40"><br><br>Comform Password:  <input type="password" name="conpass" size="40"><br><br><input id="button" type="submit" name="submit"value="Submit"></form>';
-echo '</div>';
+echo "<div id = 'middleboxFP'>";
+	echo '<form method="POST" action="password.php">User Name:  <input type="text" name="user" size="40"><br><br>Email ID:  <input type="text" name="email" size="40"><br><br><input id="button" type="submit" name="submit"value="Submit"></form>';
+echo "</div>";
 ?>
 <div id = 'bottomboxS'>
 	<p><b>Copyright : SRAVANI LALITHA, AMRITA SCHOOL OF ENGINEERING, AMRITAPURI</b>.</p>

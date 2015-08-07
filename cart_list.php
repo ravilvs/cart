@@ -5,51 +5,51 @@
 <html>
 <head>
 <title>
-Smart Cart
+smart cart
 </title>
 </head>
 <link rel='stylesheet' type = 'text/css' href='default1.css'>
 <body>
-<div id = 'topboxS'>
-	<img src="http://localhost/images/coollogo_com-958611129.png">
+<div id = 'topboxs'>
+	<img src="images/coollogo_com-958611129.png">
 </div>
 <?php
-	 $sqlcon = mysqli_connect($_SESSION['server'], $_SESSION['user'], $_SESSION['password'], $_SESSION['database']);
+	 $sqlcon = mysqli_connect($_session['server'], $_session['user'], $_session['password'], $_session['database']);
 	 if(!$sqlcon)
 			{
-				die("Error in connecting database");
+				die("error in connecting database");
 			}
 			
 	
 	//select
-	$sql ="select p.productid, p.productname, cd.ordquantity, p.price, pg.groupname, cd.ordquantity * p.price as amount from products p inner join cartdetails cd on p.productid = cd.productid inner join productgroups pg on p.groupid = pg.groupid where userId=" . $_SESSION['userid'] . " order by p.productname";
+	$sql ="select p.productid, p.productname, cd.ordquantity, p.price, pg.groupname, cd.ordquantity * p.price as amount from products p inner join cartdetails cd on p.productid = cd.productid inner join productgroups pg on p.groupid = pg.groupid where userid=" . $_session['userid'] . " order by p.productname";
 	
 	$res = $sqlcon -> query($sql);
 	
-	echo "<div id='middleboxFP'>";
+	echo "<div id='middleboxfp'>";
 	echo "<table border = '1' cellspacing = '2' cellpadding = '2' align = 'center'>";
 
 
 		echo '<tr>';
 		
 		echo '<td>';
-		echo 'Group Name';
+		echo 'group name';
 		echo '</td>';
 
 		echo '<td>';
-		echo 'Product Name';
+		echo 'product name';
 		echo '</td>';
 		
 		echo '<td>';
-		echo 'Ord Qty';
+		echo 'ord qty';
 		echo '</td>';
 		
 		echo '<td>';
-		echo 'Price';
+		echo 'price';
 		echo '</td>';
 	
 		echo '<td>';
-		echo 'Amount';
+		echo 'amount';
 		echo '</td>';
 		
 		echo '<td>';
@@ -81,15 +81,15 @@ Smart Cart
 		
 		$amount = $row['amount'];
 		echo '<td style = "text-align:  right;">';
-		echo 'Rs ' . $row['amount'];
+		echo 'rs ' . $row['amount'];
 		echo '</td>';
 		
 		echo '<td style = "text-align:  right;">';
-		echo "<img src = 'http://localhost/images/remove from shopping cart.jpg'>";
+		echo "<img src = 'images/remove from shopping cart.jpg'>";
 
 		echo '<a href="remove.php?productid=' ;
 		echo $row['productid'] ;
-		echo '">Remove</a>';
+		echo '">remove</a>';
 
 		echo '</td>';
 		
@@ -101,7 +101,7 @@ Smart Cart
 	echo '<tr>';
 		
 		echo '<td>';
-		echo 'Total Amount';
+		echo 'total amount';
 		echo '</td>';
 
 		echo '<td>';
@@ -114,7 +114,7 @@ Smart Cart
 		echo '</td>';
 	
 		echo '<td style = "text-align:  right;">';
-		echo 'Rs ' . $sum;
+		echo 'rs ' . $sum;
 		echo '</td>';
 		
 		echo '<td>';
@@ -128,36 +128,36 @@ Smart Cart
 	
 	$sqlcon -> close();
 	 echo '<a href = "index.php?groupid=';
-	 echo $_SESSION['currentgroupid'];
+	 echo $_session['currentgroupid'];
 	 echo '&ordcol=';
-	 echo $_SESSION['currentordcol'];
+	 echo $_session['currentordcol'];
 	 echo '">';
-	 echo 'Back';
+	 echo 'back';
 	 echo '</a>';
 	 echo "</div>";
 ?>
-<div id = 'bottomboxS'>
-	<p><b>Copyright : SRAVANI LALITHA, AMRITA SCHOOL OF ENGINEERING, AMRITAPURI</b>.</p>
+<div id = 'bottomboxs'>
+	<p><b>copyright : sravani lalitha, amrita school of engineering, amritapuri</b>.</p>
 </div>
 <div id = boxlinks>
-<a href="http://localhost/index.php?"><b> |Home| </b></a>
+<a href="index.php?"><b> |home| </b></a>
 <?php
-	if($_SESSION['login'] == 0)
+	if($_session['login'] == 0)
 	{
 ?>
-<a href="http://localhost/login.php?"><b> |Login| </b></a>
+<a href="login.php?"><b> |login| </b></a>
 <?php
 	}
 else
 	{
 ?>
-<a href="http://localhost/logout.php?"><b> |Logout| </b></a>
+<a href="logout.php?"><b> |logout| </b></a>
 <?php
 	}
 ?>
 </div>
-<div id = 'imageS'>
-	<img src="http://localhost/images/shopping..png">
+<div id = 'images'>
+	<img src="images/shopping.png">
 </div>
 </body>
 </html>

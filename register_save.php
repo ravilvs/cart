@@ -20,7 +20,7 @@
 	}
 	if($selpass == $selconpass)
 	{
-		$sql = "INSERT INTO users(". "UserName, Password, EmailId" . " ) VALUES (" . "'" . $selusr . "',". "'" . $selpass . "',". "'" . $selemail . "'" . ")";
+		$sql = "insert into users(". "username, password, emailid" . " ) values (" . "'" . $selusr . "',". "'" . $selpass . "',". "'" . $selemail . "'" . ")";
 		$sqlcon = mysqli_connect($_SESSION['server'], $_SESSION['user'], $_SESSION['password'], $_SESSION['database']);
 			if(!$sqlcon)
 			{

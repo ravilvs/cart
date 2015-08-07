@@ -7,7 +7,7 @@ Smart Cart
 <link rel='stylesheet' type = 'text/css' href='default1.css'>
 <body>
 <div id = 'topboxS'>
-	<img src="http://localhost/images/coollogo_com-958611129.png">
+	<img src="images/coollogo_com-958611129.png">
 </div>
 <?php
 require_once('variables.php');
@@ -26,7 +26,7 @@ require_once('variables.php');
 			{
 				die("Error in connecting database");
 			}
-	 $sql = "select password from users where UserName=" . "'" . $selusr . "'" . "AND EmailId=" . "'" . $selemail . "'";
+	 $sql = "select password from users where userName=" . "'" . $selusr . "'" . "and emailid=" . "'" . $selemail . "'";
 	 $result = $sqlcon -> query($sql);
 	 $row = $result -> fetch_assoc();
 	 if($row)
@@ -44,12 +44,12 @@ require_once('variables.php');
 	<p><b>Copyright : SRAVANI LALITHA, AMRITA SCHOOL OF ENGINEERING, AMRITAPURI</b>.</p>
 </div>
 <div id = boxlinks>
-<a href="http://localhost/index.php?"><b>|Home|</b></a>
-<a href="http://localhost/login.php?"><b>|Login|</b></a>
+<a href="index.php?"><b>|Home|</b></a>
+<a href="login.php?"><b>|Login|</b></a>
 <a href="#"><b>|My Account|</b></a>
 </div>
 <div id = 'imageS'>
-	<img src="http://localhost/images/shopping..png">
+	<img src="shopping..png">
 </div>
 </body>
 </html>
