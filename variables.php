@@ -12,7 +12,7 @@
 				die("Error in connecting database");
 			}
 			
-			$result = $sqlcon->query("select * from productgroups");
+			$result = $sqlcon->query("select * from productgroups1");
 			echo 'Records : ';
 			if(!$mysqli->error)
 			{
