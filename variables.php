@@ -12,7 +12,7 @@
 				die("Error in connecting database");
 			}
 			
-			$result = $sqlcon->query("select * from productgroups1");
+			$result = $sqlcon->query("select * from productgroups");
 			echo 'Records : ';
 			if($result)
 			{
