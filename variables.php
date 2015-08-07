@@ -2,9 +2,11 @@
 	 echo 'Session Created';
 
 	session_start();
+	 echo 'Stage-1';
 	
 	if(!isset($_SESSION['server']))
 	{
+	 echo 'Stage-2';
 	    
 	    
 		$_SESSION['server'] = '127.6.94.130';
