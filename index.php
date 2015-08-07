@@ -25,7 +25,7 @@ Smart Cart
 <body>
 
 <div id = 'topboxS'>
-	<img src="http://localhost/images/coollogo_com-958611129.png">
+	<img src="images/coollogo_com-958611129.png">
 </div>
 <div id = 'contentS'>
 <div class = 'leftdivWrapperS'>
@@ -107,7 +107,7 @@ Smart Cart
 				echo 'Quantity:  ';
 
 				echo '<input type="text" name="quantity" size="5">';
-				echo '<input type="hidden" name="prodid" value = "' . $row['ProductId'] . '">';
+				echo '<input type="hidden" name="prodid" value = "' . $row['productid'] . '">';
 				echo '<br />';
 				echo "<img src = 'images/Buy-Now-Button1.png'>";
 				echo '<input type="submit" name="cart" value="Add to cart">';
