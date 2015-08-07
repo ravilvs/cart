@@ -34,8 +34,6 @@ Smart Cart
 		<br />
 		<?php
 			
-			echo $_SESSION['user'] ;
-			
 			$sqlcon = mysqli_connect($_SESSION['server'], $_SESSION['user'], $_SESSION['password'], $_SESSION['database']);
 			if(!$sqlcon)
 			{
@@ -43,7 +41,7 @@ Smart Cart
 			}
 			
 			$result = $sqlcon->query("show tables");
-			if(!$result)
+			if($result)
 			{
     			while($row = $result->fetch_array())
     			{
