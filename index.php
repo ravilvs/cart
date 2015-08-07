@@ -45,7 +45,7 @@ Smart Cart
 			"select pg.GroupId, pg.GroupName, count(*) itemcount  from ProductGroups PG inner join Products P on P.GroupId = PG.GroupID group by pg.GroupId, pg.GroupName");
 			
 			echo 'Row Count : ';
-			echo $result.Count;
+			echo $result->num_rows;
 			echo '<br />';
 			
 			
