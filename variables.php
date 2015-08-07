@@ -4,11 +4,8 @@
 	session_start();
 	 echo 'Stage-1 -- ';
 	
-	echo $_SESSION['user'];
 	echo 'Stage - 1 completed ';
-	
-	if(!isset($_SESSION['user']))
-	{
+
 	 echo 'Stage-2';
 	    
 	    
@@ -18,6 +15,8 @@
 		$_SESSION['database'] = 'ravi';
 		$_SESSION['userid'] = 0;
 		$_SESSION['login'] = 0;
-	}
+
+	
+	echo $_SESSION['user'];
 	
 ?>
