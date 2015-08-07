@@ -57,7 +57,7 @@ Smart Cart
 			else
 			{
 			    
-			    echo 'No tables found';
+			    print_r(error_get_last());
 			}
 
 			$result = $sqlcon -> query(
