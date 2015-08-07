@@ -26,8 +26,8 @@
 			}
 			else
 			{
+			    echo "Error in getting data";
 			    
-			    print_r(error_get_last());
 			}
 
 ?>
