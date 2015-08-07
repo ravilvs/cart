@@ -15,8 +15,9 @@
 			$result = $sqlcon->query("select * from productgroups");
     			while($row = $result->fetch_array())
     			{
-    			    echo 'Table : ';
 			        echo $row[0];
+			        echo ' - ';
+			        echo $row[1];
 			        echo '<br />';
 			        
     			}
