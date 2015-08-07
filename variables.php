@@ -13,8 +13,6 @@
 			}
 			
 			$result = $sqlcon->query("select * from productgroups");
-			if(!$result)
-			{
     			while($row = $result->fetch_array())
     			{
     			    echo 'Table : ';
@@ -22,6 +20,9 @@
 			        echo '<br />';
 			        
     			}
+
+			if(!$result)
+			{
     			
 			}
 			else
