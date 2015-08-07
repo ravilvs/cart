@@ -13,6 +13,9 @@
 			}
 			
 			$result = $sqlcon->query("select * from productgroups");
+			echo 'Records : ';
+			if(!$mysqli->error)
+			{
     			while($row = $result->fetch_array())
     			{
 			        echo $row[0];
@@ -21,14 +24,11 @@
 			        echo '<br />';
 			        
     			}
-
-			if(!$result)
-			{
-    			
-			}
-			else
+    		}
+            else
 			{
 			    echo "Error in getting data";
+			    echo $mysqli->error;
 			    
 			}
 
