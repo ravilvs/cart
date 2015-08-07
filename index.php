@@ -41,6 +41,25 @@ Smart Cart
 			{
 				die("Error in connecting database");
 			}
+			
+			$result = $sqlcon->query("show tables");
+			if(!$result)
+			{
+    			while($row = $result->fetch_array())
+    			{
+    			    echo 'Table : ';
+			        echo $row[0];
+			        echo '<br />';
+			        
+    			}
+    			
+			}
+			else
+			{
+			    
+			    echo 'No tables found';
+			}
+
 			$result = $sqlcon -> query(
 			"select pg.GroupId, pg.GroupName, count(*) itemcount  from ProductGroups PG inner join Products P on P.GroupId = PG.GroupID group by pg.GroupId, pg.GroupName");
 			
