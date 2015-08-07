@@ -59,7 +59,7 @@ Smart Cart
 			}
 
 			$result = $sqlcon -> query(
-			"select pg.GroupId, pg.GroupName, count(*) itemcount  from productgroups PG inner join products P on P.GroupId = PG.GroupID group by pg.GroupId, pg.GroupName");
+			"select pg.groupid, pg.groupname, count(*) itemcount  from productgroups pg inner join products p on p.groupid = pg.groupid group by pg.groupid, pg.groupname");
 			
 			echo '<ul>';
 			while($row = $result->fetch_assoc())
@@ -93,14 +93,14 @@ Smart Cart
 
 <div id = 'rightboxS'>
 <?php
-		$qury = "select ProductId,ProductName, Price from Products where GroupId = " . $selgrp ;
+		$qury = "select productid,productname, price from products where groupid = " . $selgrp ;
 		switch($selord)
 		{
 			case 'N':
-				$itemres = $sqlcon -> query($qury . ' order by ProductName');
+				$itemres = $sqlcon -> query($qury . ' order by productname');
 				break;
 			case 'P':
-				$itemres = $sqlcon -> query($qury . ' order by Price');
+				$itemres = $sqlcon -> query($qury . ' order by price');
 				break;
 		}
 		while($row = $itemres -> fetch_assoc())
